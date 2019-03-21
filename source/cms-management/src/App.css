@@ -188,3 +188,65 @@ body {
 .mr-10 {
   margin-right: 10px;
 }
+.mt-30 {
+  margin-top: 30px;
+}
+
+/* userColor */
+.userColor {
+  background-color: #1b264f;
+  border: #1b264f;
+}
+
+/* test color background bs3 row*/
+
+.backgroundSet {
+  padding: 30px;
+}
+
+.user-list {
+  height: 180px;
+  width: 260px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.16);
+  background-color: white;
+}
+
+.user-avatar {
+  height: 60px;
+  width: 250px;
+  background-color: white;
+  padding: 1px;
+}
+
+.user-avatar-circle {
+  background-color: pink;
+  width: 60px;
+  height: 60px;
+  margin-left: 40%;
+  border-radius: 50%;
+}
+
+#user-spanName p {
+  padding: 20px;
+  margin-top: 0px;
+  margin-left: 5px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.user-name {
+  padding-top: 15px;
+  margin: 4px;
+  background-color: white;
+}
+.user-role center {
+  font-size: 14px;
+  color: #777;
+  padding-bottom: 13px;
+}
+
+.user-time center {
+  font-size: 13px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #333;
+}
