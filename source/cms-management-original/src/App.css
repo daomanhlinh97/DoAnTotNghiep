@@ -1,0 +1,723 @@
+body {
+  background: #eeeeee;
+  font-family: "Varela Round", sans-serif;
+}
+.form-inline {
+  display: inline-block;
+}
+.navbar-header.col {
+  padding: 0%;
+}
+.navbar {
+  color: #fff;
+  background: #1b264f;
+  padding: 0px 16px;
+  border-radius: 0;
+  border: none;
+  box-shadow: 0 0 10px rgba(48, 47, 47, 0.1);
+}
+
+.navbar img {
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  margin-right: 10px;
+}
+.navbar .navbar-brand {
+  color: #efe5ff;
+  padding-left: 0;
+  padding-right: 50px;
+  font-size: 24px;
+ 
+}
+.navbar .navbar-brand:hover,
+.navbar .navbar-brand:focus {
+  color: #fff;
+}
+
+
+.navbar .navbar-brand i {
+  font-size: 25px;
+  margin-right: 5px;
+}
+.search-box {
+  position: relative;
+}
+.search-box input {
+  padding-right: 35px;
+  min-height: 38px;
+  border: none;
+  background: #faf7fd;
+  border-radius: 3px !important;
+}
+.search-box input:focus {
+  background: #fff;
+  box-shadow: none;
+}
+.search-box .input-group-addon {
+  min-width: 35px;
+  border: none;
+  background: transparent;
+  position: absolute;
+  right: 0;
+  z-index: 9;
+  padding: 10px 7px;
+  height: 100%;
+}
+
+.search-box i {
+  color: #a0a5b1;
+  font-size: 19px;
+}
+.navbar .nav-item i {
+  font-size: 25px;
+  text-align: center;
+}
+.navbar .nav-item span {
+  position: relative;
+  text-align: left;
+  top: 3px;
+}
+
+.navbar .nav > li a {
+  color: #efe5ff;
+  padding: 8px 15px;
+  font-size: 14px;
+}
+.navbar .nav > li a:hover,
+.navbar .nav > li a:focus {
+  color: #fff;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.3);
+}
+.navbar .nav > li > a > i {
+  display: block;
+  text-align: center;
+}
+.navbar .dropdown-item i {
+  font-size: 16px;
+  min-width: 22px;
+}
+.navbar .dropdown-item .material-icons {
+  font-size: 21px;
+  line-height: 16px;
+  vertical-align: middle;
+  margin-top: -2px;
+}
+.navbar .nav-item.open > a,
+.navbar .nav-item.open > a:hover,
+.navbar .nav-item.open > a:focus {
+  color: #fff;
+  background: none !important;
+}
+.navbar .dropdown-menu {
+  border-radius: 1px;
+  border-color: #e5e5e5;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.navbar .dropdown-menu li a {
+  color: #777 !important;
+  padding: 8px 20px;
+  line-height: normal;
+}
+.navbar .dropdown-menu li a:hover,
+.navbar .dropdown-menu li a:focus {
+  color: #333 !important;
+  background: transparent !important;
+}
+.navbar .nav .active a,
+.navbar .nav .active a:hover,
+.navbar .nav .active a:focus {
+  color: #fff;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+  background: transparent !important;
+}
+.navbar .nav .user-action {
+  padding: 9px 15px;
+}
+.navbar .navbar-toggle {
+  border-color: #fff;
+}
+.navbar .navbar-toggle .icon-bar {
+  background: #fff;
+}
+.navbar .navbar-toggle:focus,
+.navbar .navbar-toggle:hover {
+  background: transparent;
+}
+.navbar .navbar-nav .open .dropdown-menu {
+  background: #faf7fd;
+  border-radius: 1px;
+  border-color: #faf7fd;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+.navbar .divider {
+  background-color: #e9ecef !important;
+}
+@media (min-width: 1200px) {
+  .form-inline .input-group {
+    width: 350px;
+    margin-left: 30px;
+  }
+}
+@media (max-width: 1199px) {
+  .navbar .nav > li > a > i {
+    display: inline-block;
+    text-align: left;
+    min-width: 30px;
+    position: relative;
+    top: 4px;
+  }
+  .navbar .navbar-collapse {
+    border: none;
+    box-shadow: none;
+    padding: 0;
+  }
+  .navbar .navbar-form {
+    border: none;
+    display: block;
+    margin: 10px 0;
+    padding: 0;
+  }
+  .navbar .navbar-nav {
+    margin:0%;
+  }
+  .navbar .navbar-toggle {
+    margin-right: 8px 0;
+  }
+  .input-group {
+    width: 100%;
+  }
+}
+
+.mt-10 {
+  margin-top: 10px;
+}
+.mr-10 {
+  margin-right: 10px;
+}
+.mt-30 {
+  margin-top: 30px;
+}
+
+/* userColor */
+.userColor {
+  background-color: #1b264f;
+  border: #1b264f;
+}
+
+/* test color background bs3 row*/
+
+.backgroundSet {
+  padding: 30px;
+}
+
+.user-list {
+  height: 180px;
+  width: 260px;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.16);
+  background-color: white;
+}
+
+.user-avatar {
+  height: 60px;
+  width: 250px;
+  background-color: white;
+  padding: 1px;
+}
+
+.user-avatar-circle {
+  background-color: pink;
+  width: 60px;
+  height: 60px;
+  margin-left: 40%;
+  border-radius: 50%;
+}
+
+#user-spanName p {
+  padding: 20px;
+  margin-top: 0px;
+  margin-left: 5px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.user-name {
+  padding-top: 15px;
+  margin: 4px;
+  background-color: white;
+}
+.user-role center {
+  font-size: 14px;
+  color: #777;
+  padding-bottom: 13px;
+}
+
+.user-time center {
+  font-size: 13px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #333;
+}
+
+/*Tự định nghĩa phần Created*/
+.button-created
+{
+  background-color:#00b359;
+  border-radius: 4px;
+  color: white;
+  width: 120px;
+  height: 28px;
+  border: none;
+  margin-top: 20px;
+  margin-left: 20px;
+}
+
+.button-created:hover
+{
+  background-color: #00cc66;
+}
+
+.form-created
+{
+  margin-top: 20px;
+  width: 100%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: white;
+  background-image: url(../src/pages/PackagesPage/Media/bck.png);
+}
+
+.label-created
+{
+  margin-top: 10%;
+  margin-left: 40%;
+  color: black;
+  font-size: 16px
+}
+/*Tự định nghĩa phần Created*/
+
+/*Tự định nghĩa cho phần Local*/
+/*basic settings */
+a:focus {
+  outline: none !important;
+  outline-offset: none !important;
+}
+/* helper classses */
+.margin-top-20 {
+  margin-top: 20px;
+}
+.margin-bottom-20 {
+  margin-top: 20px;
+}
+
+.no-margin {
+  margin: 0px;
+}
+/* box component */
+.box {
+  border-color: #e6e6e6;
+  background: #FFF;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  padding: 10px;
+  margin-top: 10px;
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.box-center {
+  margin: 20px auto;
+}
+/* input [type = file]
+----------------------------------------------- */
+input[type=file] {
+  display: block !important;
+  right: 1px;
+  top: 1px;
+  height: 34px;
+  opacity: 0;
+  width: 100%;
+  background: none;
+  position: absolute;
+  overflow: hidden;
+  z-index: 2;
+}
+.control-fileupload {
+  display: block;
+  border: 1px solid #d6d7d6;
+  background: #FFF;
+  border-radius: 4px;
+  width: 100%;
+  height: 36px;
+  line-height: 36px;
+  padding: 0px 10px 2px 10px;
+  overflow: hidden;
+  position: relative;
+  /* File upload button */
+}
+.control-fileupload:before,
+.control-fileupload input,
+.control-fileupload label {
+  cursor: pointer !important;
+}
+.control-fileupload:before {
+  /* inherit from boostrap btn styles */
+  padding: 4px 12px;
+  margin-bottom: 0;
+  font-size: 14px;
+  color: #333333;
+  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  background-color: #f5f5f5;
+  background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+  background-repeat: repeat-x;
+  border: 1px solid #cccccc;
+  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+  border-bottom-color: #b3b3b3;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.05);
+  transition: color 0.2s ease;
+  /* add more custom styles*/
+  content: 'Browse';
+  display: block;
+  position: absolute;
+  z-index: 1;
+  top: 2px;
+  right: 2px;
+  line-height: 20px;
+  text-align: center;
+}
+.control-fileupload:hover:before,
+.control-fileupload:focus:before {
+  background-color: #e6e6e6;
+  color: #333333;
+  text-decoration: none;
+  background-position: 0 -15px;
+  transition: background-position 0.2s ease-out;
+}
+.control-fileupload label {
+  line-height: 24px;
+  color: #999999;
+  font-size: 14px;
+  font-weight: normal;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  position: relative;
+  z-index: 1;
+  margin-right: 90px;
+  margin-bottom: 0px;
+  cursor: text;
+}
+
+.form-local
+{
+  margin-top: 10px;
+  width: 600px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  background-color: #FFF;
+  border: 1px dashed black;
+  border-width: 2px;
+  text-align: center;
+}
+
+.label-local{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #000080;
+}
+
+.title-local
+{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+  margin-top: 70%;
+  font-weight: bolder;
+}
+
+.last-label-local{
+  color: #7e7a7a;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 900;
+}
+
+.icon-box{
+  background-image: url(./pages/PackagesPage/Media/box.png);
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.lable-after-icon-box
+{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 14px;
+  font-weight: bold;
+  position: absolute;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: gray;
+}
+
+/*Tự định nghĩa cho phần Local*/
+
+/*Tự định nghĩa cho phần package*/
+.span-package
+{
+  position: relative;
+  text-align: center;
+}
+
+.fa-fa-icon
+{
+  position: relative;
+  text-align: center;
+  left: 40%;
+  size: 100px;
+}
+
+.title-brand{
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+.nav-link-package{
+  border: 1px solid rgb(209, 209, 209);
+  border-top: none;
+  border-bottom: none;
+  border-left: none;
+}
+
+.nav-package{
+  border: 1px solid rgb(209, 209, 209);
+  border-top: none;
+  border-bottom: none;
+  border-right: none;
+}
+
+.navbar-whitebackground{
+  color:black;
+  background:white;
+  padding: 0px 16px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  padding-left: 0;
+  padding-right: 50px;
+  padding-top: 0%;
+}
+
+.search-packages
+{
+  width: 94%;
+  border: 2px solid #d6d6c2;
+  border-radius: 5px;
+  height: 40px;
+  position: absolute;
+  top: 26%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  outline: none;
+}
+
+.table-link
+{
+  width: 94%;
+  border: 1px solid #d6d6c2;
+  border-radius: 10px;
+  height: 40px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  font-size: 16px;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #FFF;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.td-table-link{
+  border: 1px solid #d6d6c2;
+  text-align: center;
+}
+
+.td-table-link:hover{
+  cursor: pointer;
+  color:#006699;
+}
+
+.td-table-link button{
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  border: none;
+  font-weight: bold;
+}
+
+.button-border-radius-left{
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  border: none;
+  font-weight: bold;
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.button-border-radius-right{
+  width: 100%;
+  height: 100%;
+  background-color: #FFF;
+  border: none;
+  font-weight: bold;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.td-table-link button:focus, .button-border-radius-right:focus, .button-border-radius-left:focus{
+  background-color: #f8cdc2;
+  color: black;
+  border: none;
+  outline: none;
+}
+
+.search-packages:hover
+{
+  border: 2px solid gray;
+}
+
+.search-packages:focus
+{
+  border: 2px solid gray;
+  background-color: #f5f5f0;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/*Tự định nghĩa cho phần package*/
+
+/*Tự định nghĩa cho phần Installed*/
+.label-installed
+{
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 2%;
+  margin-left: 5%;
+}
+
+.layout{
+  margin-top: 2%;
+  margin-left: 5%;
+  width: 95%;
+}
+
+.form-installed{
+  width: 95%;
+  height: 70px;
+  background-color: #FFF;
+}
+
+.icon-box-installed
+{
+  width: 50px;
+  height: 50px;
+  background-image: url(./pages/PackagesPage/Media/box-0.25.png);
+  background-color: #FFF;
+  border-image-outset: 0;
+  margin-top: 13%;
+  margin-left: 14%;
+}
+
+.button-installed{
+  outline: none;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 12px;
+  font-weight: bold;
+  background-color: #ff4d4d;
+  border: none;
+  color: #FFF;
+  border-radius: 5px;
+  margin-left: 18%;
+}
+
+.table-installed
+{
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+}
+
+.td-installed-header
+{
+  border: 1px solid black;
+  width: 5%;
+  height: 100%;
+  text-align: center;
+}
+.td-installed-body
+{
+  border: 1px solid black;
+  text-align: left;
+}
+
+.td-installed-foot
+{
+  border: 1px solid rgb(128, 84, 84);
+  width: 15%;
+  height: 100%;
+}
+.label-name-package
+{
+  color: black;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 16px;
+  margin-left: 3%;
+}
+
+.label-info-package
+{
+  color: gray;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.pos
+{
+  margin-left: 3%;
+}
+/*Tự định nghĩa cho phần Installed*/
