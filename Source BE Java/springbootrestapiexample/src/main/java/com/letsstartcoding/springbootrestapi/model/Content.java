@@ -29,6 +29,13 @@ public class Content {
 	private String Icon;
 	private String Description;
 	private boolean IsContainer;
+	
+	
+	
+	public Content() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public Content(long id, String alias, String icon, String description, boolean isContainer) {
 		super();
 		Id = id;

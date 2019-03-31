@@ -26,20 +26,28 @@ public class History {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long Id;
 	private long ParentId;
+
 	private String ContentChange;
+	
+	private String Author;
 	
 	@Temporal(TemporalType.TIMESTAMP)
 	@LastModifiedDate
 	private Date Date;
-	private String User;
 	private String Status;
-	public History(long id, long parentId, String contentChange, java.util.Date date, String user, String status) {
+	
+	
+	public History() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public History(long id, long parentId, String contentChange, java.util.Date date, String author, String status) {
 		super();
 		Id = id;
 		ParentId = parentId;
 		ContentChange = contentChange;
 		Date = date;
-		User = user;
+		Author = author;
 		Status = status;
 	}
 	public long getId() {
@@ -66,11 +74,14 @@ public class History {
 	public void setDate(Date date) {
 		Date = date;
 	}
-	public String getUser() {
-		return User;
+	
+	
+	
+	public String getAuthor() {
+		return Author;
 	}
-	public void setUser(String user) {
-		User = user;
+	public void setAuthor(String author) {
+		Author = author;
 	}
 	public String getStatus() {
 		return Status;
