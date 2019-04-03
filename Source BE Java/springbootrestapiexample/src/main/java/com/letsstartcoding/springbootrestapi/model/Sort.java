@@ -34,6 +34,14 @@ public class Sort{
 	private long AllowedId;
 	private int SortOrder;
 	private String Content;
+	
+	
+	
+	
+	public Sort() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public Sort(long parentId, long childId, long allowedId, int sortOrder, String content) {
 		super();
 		ParentId = parentId;
