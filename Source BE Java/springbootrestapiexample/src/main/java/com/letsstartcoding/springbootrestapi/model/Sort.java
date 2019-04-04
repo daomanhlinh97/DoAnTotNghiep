@@ -34,21 +34,20 @@ public class Sort{
 	private long AllowedId;
 	private int SortOrder;
 	private String Content;
-	
-	
-	
+	private String Type;
 	
 	public Sort() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Sort(long parentId, long childId, long allowedId, int sortOrder, String content) {
+	public Sort(long parentId, long childId, long allowedId, int sortOrder, String content, String type) {
 		super();
 		ParentId = parentId;
 		ChildId = childId;
 		AllowedId = allowedId;
 		SortOrder = sortOrder;
 		Content = content;
+		Type = type;
 	}
 	public long getParentId() {
 		return ParentId;
@@ -79,6 +78,12 @@ public class Sort{
 	}
 	public void setContent(String content) {
 		Content = content;
+	}
+	public String getType() {
+		return Type;
+	}
+	public void setType(String type) {
+		Type = type;
 	}
 
 	
