@@ -721,3 +721,273 @@ input[type=submit]:hover {
   margin-left: 3%;
 }
 /*Tự định nghĩa cho phần Installed*/
+
+
+/*  */
+
+
+/* media page */
+
+@import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
+
+
+
+
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    display: flex;
+    margin-top:-19px;
+}
+
+#sidebar {
+    min-width: 300px;
+    max-width: 300px;
+    background: white;
+    transition: all 0.3s;
+    
+    
+ 
+}
+.folder{
+  font-size: 16px;
+  margin: 0 6px 0 6px;
+  color:#1b264f ;
+  font-weight: bold;
+}
+
+.arrow{
+  font-size: 12px;
+}
+.fa-trash{
+  font-size: 18px;
+  margin-right:9px;
+  margin-left:15px;
+  color:#1b264f;
+    
+}
+
+.fa-sort-desc{
+  margin-left: 5px;
+}
+#sidebar .sidebar-header {
+    padding-left: 10px;
+    background: white;
+}
+.sidebar-header h3{
+  color: #1b264f;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+    
+}
+#sidebar{
+  height: 580px;
+}
+#sidebar ul p {
+    color:black;
+    font-weight: 400;
+    font-size: 16px;
+    padding-left: 6px;
+    padding-bottom: 5px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+
+
+#sidebar ul li.active>p,
+p[aria-expanded="true"] {
+    color: #fff;
+    background: rgba(223, 217, 217, 0.75);
+    height: 25px;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: white;
+}
+
+
+
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: 100%;
+    height: 580px !important;
+    padding: 30px;
+    transition: all 0.3s;
+    
+}
+
+.userColor p{
+  float: left;
+  margin-top:3px;
+
+}
+
+.userColor{
+  height: 37px;
+}
+
+.choose-file{
+  height: 230px;
+  width: 100%;
+  background-color: white;
+  
+  margin-top:20px;
+}
+.click-file{
+  padding:100px;
+  margin-left: 300px;
+}
+
+
+
+.btn-products{
+  width: 335px;
+  height: 37px;
+  background-color: white;
+  margin-top: 20px;
+  border: none; 
+  border-bottom: 0.5px solid rgb(209, 193, 193);
+  border-right: 0.5px solid rgb(209, 193, 193);
+  margin-right: 13px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.btn-products-design{
+  width: 338px;
+  height: 37px;
+  background-color: white;
+  margin-top: 20px;
+  border: none; 
+  border-bottom: 0.5px solid rgb(209, 193, 193);
+  border-right: 0.5px solid rgb(209, 193, 193);
+  font-family: 'Poppins', sans-serif;
+  
+}
+
+/* contents page */
+
+.padding-header{
+  background-color: white;
+  padding-left: 15px;
+  min-width: 600px;
+  margin-bottom: 20px;
+}
+
+.padding-content{
+  background-color: white;
+  padding-left: 15px;
+  min-width: 600px;
+  padding-bottom: 10px;
+}
+.link-home{
+  font-weight: none;
+  font-size: 16px !important;
+  color: black;
+  margin-left: 5%;
+  margin-top: 10px;
+  margin-bottom: 100px !important;
+}
+
+.home-content{
+  font-size: 19px;
+  margin-right:9px;
+  margin-left:6px;
+  color:#1b264f;
+  
+}
+.home-content-icon{
+  padding-right: 7px;
+  padding-bottom: 10px;
+}
+.choose-file-content{
+  width: 100%;
+  
+  margin-top:20px;
+}
+
+.hero-content{
+  padding-top: 3px;
+  font-size: 10px;
+  border-bottom:0.5px solid rgb(221, 218, 218);
+}
+.header-content{
+  margin-top:10px;
+}
+.header-left-content h4{
+  float: left;
+  padding-right:5px;
+}
+
+.header-left-content p{
+  color: red;
+  padding-top: 10px;
+}
+
+.header-left-content h6{
+  color: #898d8f;
+  font-size: 13px;
+}
+.row-header{
+  padding-top:10px;
+  border-bottom:0.5px solid #eeeeee;;
+
+}
+#input{
+  margin-top: 13px;
+}
+.action-link-product{
+  padding-top:10px;
+}
+
+.full-width h4{
+  padding-top: 30px;
+}
+
+.box-full-width{
+  width: 90%;
+  min-width: 600px ;
+  border:0.5px solid #dddbdb;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.box-darsh{
+  border: dashed 2.5px rgb(190, 183, 183);
+  height: 100%;
+  padding: 15px
+}
+.btn-add-content{
+  width: 100%;
+  margin-top: 10px;
+}
+
+
+.padding-footer{
+  background-color: white;
+  padding-left: 15px;
+  min-width: 600px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}

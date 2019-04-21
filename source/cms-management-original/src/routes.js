@@ -6,10 +6,7 @@ import SettingPage from "./pages/SettingPage/SettingPage";
 import UserPage from "./pages/UserPage/UserPage";
 import FormPage from "./pages/FormPage/FormPage";
 import PackagesPage from "./pages/PackagesPage/PackagesPage";
-import CreatedChildPage from "./pages/PackagesPage/ChildPage/CreatedChildPage";
-import LocalChildPage from "./pages/PackagesPage/ChildPage/LocalChildPage";
-import PackagesChildPage from "./pages/PackagesPage/ChildPage/PackagesChildPage";
-import InstalledChildPage from "./pages/PackagesPage/ChildPage/InstalledChildPage";
+
 const routes = [
   {
     path: "/",
@@ -37,18 +34,6 @@ const routes = [
   },
   {
     path: "/packages",
-    main: () => <PackagesPage/>
-  },
-  {
-    path: "/packages/installed",
-    main: () => <PackagesPage/>
-  },
-  {
-    path: "/packages/local",
-    main: () => <PackagesPage/>
-  },
-  {
-    path: "/packages/created",
     main: () => <PackagesPage/>
   }
 ];
