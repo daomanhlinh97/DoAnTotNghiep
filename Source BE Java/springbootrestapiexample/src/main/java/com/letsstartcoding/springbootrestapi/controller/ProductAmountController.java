@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.letsstartcoding.springbootrestapi.dao.ProductAmountDAO;
 import com.letsstartcoding.springbootrestapi.model.ProductAmount;
+import com.letsstartcoding.springbootrestapi.model.ProductContent;
 
 @RestController
 @RequestMapping("/ProductAmount")
@@ -35,6 +36,19 @@ public class ProductAmountController {
 	@GetMapping("/getall")
 	public List<ProductAmount> getAllEmployees(){
 		return DAO.findAll();
+	}
+	
+	/*get by id*/
+	@GetMapping("/getid/{id}")
+	public ResponseEntity<ProductAmount> getProContentById(@PathVariable(value="id") Long empid){
+		
+		ProductAmount emp= DAO.findOne(empid);
+
+		if(emp==null) {
+			return ResponseEntity.notFound().build();
+		}
+		return ResponseEntity.ok().body(emp);
+		
 	}
 	
 }

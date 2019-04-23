@@ -37,5 +37,17 @@ public class HistoryController {
 		return DAO.findAll();
 	}
 	
+	/*get by id*/
+	@GetMapping("/getid/{id}")
+	public ResponseEntity<History> getProContentById(@PathVariable(value="id") Long empid){
+		
+		History emp= DAO.findOne(empid);
+
+		if(emp==null) {
+			return ResponseEntity.notFound().build();
+		}
+		return ResponseEntity.ok().body(emp);
+		
+	}
 
 }

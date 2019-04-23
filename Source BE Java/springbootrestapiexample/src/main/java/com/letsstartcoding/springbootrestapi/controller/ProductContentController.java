@@ -16,7 +16,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.letsstartcoding.springbootrestapi.dao.ProductContentDAO;
+import com.letsstartcoding.springbootrestapi.model.Page;
 import com.letsstartcoding.springbootrestapi.model.ProductContent;
+import com.letsstartcoding.springbootrestapi.repository.ProductContentRepository;
 
 @RestController
 @RequestMapping("/ProductContent")
@@ -24,6 +26,7 @@ public class ProductContentController {
 	
 	@Autowired
 	ProductContentDAO DAO;
+	ProductContentRepository a;
 	
 	/* to save*/
 	@PostMapping("/add")
@@ -35,6 +38,19 @@ public class ProductContentController {
 	@GetMapping("/getall")
 	public List<ProductContent> getAllEmployees(){
 		return DAO.findAll();
+	}
+	
+	/*get by id*/
+	@GetMapping("/getid/{id}")
+	public ResponseEntity<ProductContent> getProContentById(@PathVariable(value="id") Long empid){
+		
+		ProductContent emp= DAO.findOne(empid);
+
+		if(emp==null) {
+			return ResponseEntity.notFound().build();
+		}
+		return ResponseEntity.ok().body(emp);
+		
 	}
 	
 }
