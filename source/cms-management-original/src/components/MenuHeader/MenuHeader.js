@@ -36,13 +36,15 @@ const MenuLink = ({ label, to, icon, exact }) => {
 class MenuHeader extends Component {
   render() {
     return (
-      <div>
+      <div className = "header-fixed" >
         <nav className="navbar navbar-inverse navbar-expand-xl navbar-dark">
           <div className="navbar-header d-flex col">
+            <Link to = "/">
             <a className="navbar-brand">
               <i className="fa fa-cube" />
               Umbraco<b>CMS</b>
             </a>
+            </Link>
             <button
               type="button"
               data-target="#navbarCollapse"
@@ -61,9 +63,7 @@ class MenuHeader extends Component {
             className="collapse navbar-collapse justify-content-start"
           >
             <ul className="nav navbar-nav navbar-right ml-auto">
-              <li className="nav-item">
-                <Search />
-              </li>
+              
               {this.showMenu(menus)}
             </ul>
           </div>

@@ -7,6 +7,24 @@ class Home extends Component {
   render() {
     return (
         <div id="content">
+        <div className = "row save-publish">
+          <div className = "save-publish-bottom">
+          <div className = "col-md-6"></div>
+          <div className = "col-md-2">
+          
+          <button class="btn btn-default btn-content-preview">Preview</button>
+                    
+          </div>
+          <div className = "col-md-1">
+          
+          <button class="btn btn-default btn-content-save">Save</button>
+          </div>
+          <div className = "col-md-3">          
+          <button className="btn btn-success btn-content-save-publish">Save and publish</button>
+          </div>
+          </div>
+        </div>
+
         <div className="padding-header">
           <div className="choose-file-content">
             <div className="hero-content">
@@ -122,7 +140,7 @@ class Home extends Component {
                   they want to be, is not for me to decide."
                 </h3>
               </div>
-              <button type="button" class="btn btn-info btn-add-content">
+              <button class="btn btn-info btn-add-content">
                 Add content
               </button>
             </div>

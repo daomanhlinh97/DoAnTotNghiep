@@ -8,18 +8,21 @@ class Sidebar extends Component {
   render() {
     return (
       <nav id="sidebar">
-        <div className="sidebar-header">
+      <Link to = "/" className = "link-decoration">
+      <div className="sidebar-header ">
           <h3>Content</h3>
-        </div>
+      </div>
+      </Link>
+        
 
         <ul className="list-unstyled components">
           <li>
-            <Link to="/">
+            <Link to="/" className = "link-decoration">
               <p
                 href="#homeSubmenu0"
                 data-toggle="collapse"
                 aria-expanded="false"
-                className="dropdown-toggle">
+                className="dropdown-toggle show-hover">
                 <i class="fa fa-location-arrow arrow" aria-hidden="true" />
                 <i class="fa fa-home home-content" aria-hidden="true" />
                 Home
@@ -71,8 +74,8 @@ class Sidebar extends Component {
             </ul>
           </li>
           <li>
-            <Link to="/content/recyle">
-              <p>
+            <Link to="/content/recyle" className = "link-decoration">
+              <p className = "show-hover">
                 <i class="fa fa-trash" aria-hidden="true" />
                 Recycle Bin
               </p>
