@@ -15,40 +15,41 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.letsstartcoding.springbootrestapi.dao.ContentDAO;
-import com.letsstartcoding.springbootrestapi.model.Content;
+import com.letsstartcoding.springbootrestapi.dao.PageDAO;
+import com.letsstartcoding.springbootrestapi.model.Page;
+import com.letsstartcoding.springbootrestapi.model.ProductContent;
 
 @RestController
-@RequestMapping("/Content")
-public class ContentController {
+@RequestMapping("/Page")
+public class PageController {
 	
 	@Autowired
-	ContentDAO DAO;
+	PageDAO DAO;
 	
 	/* to save*/
 	@PostMapping("/add")
-	public Content createEmployee(@Valid @RequestBody Content emp) {
+	public Page createEmployee(@Valid @RequestBody Page emp) {
 		return DAO.save(emp);
 	}
 	
 	/*get all*/
 	@GetMapping("/getall")
-	public List<Content> getAllEmployees(){
+	public List<Page> getAllEmployees(){
 		return DAO.findAll();
 	}
 	
-//	/*get employee by empid*/
-//	@GetMapping("/employees/{id}")
-//	public ResponseEntity<cmsSort> getEmployeeById(@PathVariable(value="id") Long empid){
-//		
-//		cmsSort emp=employeeDAO.findOne(empid);
-//		
-//		if(emp==null) {
-//			return ResponseEntity.notFound().build();
-//		}
-//		return ResponseEntity.ok().body(emp);
-//		
-//	}
+	/*get by id*/
+	@GetMapping("/getid/{id}")
+	public ResponseEntity<Page> getProContentById(@PathVariable(value="id") Long empid){
+		
+		Page emp= DAO.findOne(empid);
+
+		if(emp==null) {
+			return ResponseEntity.notFound().build();
+		}
+		return ResponseEntity.ok().body(emp);
+		
+	}
 //	
 //	
 //	/*update an employee by empid*/

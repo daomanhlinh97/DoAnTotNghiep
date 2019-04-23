@@ -15,39 +15,39 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.letsstartcoding.springbootrestapi.dao.SortDAO;
-import com.letsstartcoding.springbootrestapi.model.ProductContent;
-import com.letsstartcoding.springbootrestapi.model.Sort;
-import com.letsstartcoding.springbootrestapi.model.CompositeKey;
+import com.letsstartcoding.springbootrestapi.dao.ContactDAO;
+import com.letsstartcoding.springbootrestapi.model.Contact;
 
 @RestController
-@RequestMapping("/Sort")
-public class SortController {
+@RequestMapping("/Contact")
+public class ContactController {
 	
 	@Autowired
-	SortDAO DAO;
+	ContactDAO DAO;
 	
 	/* to save*/
 	@PostMapping("/add")
-	public Sort createEmployee(@Valid @RequestBody Sort emp) {
+	public Contact createEmployee(@Valid @RequestBody Contact emp) {
 		return DAO.save(emp);
 	}
 	
 	/*get all*/
 	@GetMapping("/getall")
-	public List<Sort> getAllEmployees(){
+	public List<Contact> getAllEmployees(){
 		return DAO.findAll();
 	}
 	
 	/*get by id*/
-	@GetMapping("/getid/{id}/{id2}/{id3}")
-	public ResponseEntity<Sort> getProContentById(@PathVariable(value="id") Long id1,
-															@PathVariable(value="id2") Long id2, 
-															@PathVariable(value="id3") Long id3){
+	@GetMapping("/getid/{id}")
+	public ResponseEntity<Contact> getProContentById(@PathVariable(value="id") Long empid){
+		
+		Contact emp= DAO.findOne(empid);
 
-		CompositeKey id = new CompositeKey(id1, id2, id3);
-		Sort sort = DAO.findOne(id);
-		return ResponseEntity.ok().body(sort);
+		if(emp==null) {
+			return ResponseEntity.notFound().build();
+		}
+		return ResponseEntity.ok().body(emp);
+		
 	}
 
 }

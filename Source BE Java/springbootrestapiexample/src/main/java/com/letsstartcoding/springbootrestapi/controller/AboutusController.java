@@ -15,33 +15,33 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.letsstartcoding.springbootrestapi.dao.HistoryDAO;
-import com.letsstartcoding.springbootrestapi.model.History;
+import com.letsstartcoding.springbootrestapi.dao.AboutusDAO;
+import com.letsstartcoding.springbootrestapi.model.Aboutus;
 
 @RestController
-@RequestMapping("/History")
-public class HistoryController {
+@RequestMapping("/Aboutus")
+public class AboutusController {
 	
 	@Autowired
-	HistoryDAO DAO;
+	AboutusDAO DAO;
 	
 	/* to save*/
 	@PostMapping("/add")
-	public History createEmployee(@Valid @RequestBody History emp) {
+	public Aboutus createEmployee(@Valid @RequestBody Aboutus emp) {
 		return DAO.save(emp);
 	}
 	
 	/*get all*/
 	@GetMapping("/getall")
-	public List<History> getAllEmployees(){
+	public List<Aboutus> getAllEmployees(){
 		return DAO.findAll();
 	}
 	
 	/*get by id*/
 	@GetMapping("/getid/{id}")
-	public ResponseEntity<History> getProContentById(@PathVariable(value="id") Long empid){
+	public ResponseEntity<Aboutus> getProContentById(@PathVariable(value="id") Long empid){
 		
-		History emp= DAO.findOne(empid);
+		Aboutus emp= DAO.findOne(empid);
 
 		if(emp==null) {
 			return ResponseEntity.notFound().build();
@@ -49,5 +49,17 @@ public class HistoryController {
 		return ResponseEntity.ok().body(emp);
 		
 	}
-
+	
+	/*get by id*/
+	@GetMapping("/getname/{id}")
+	public ResponseEntity<Aboutus> getProContentByName(@PathVariable(value="id") String empid){
+		
+		List<Aboutus> emp= DAO.findAll();
+		for(int i=0;i<emp.size();i++) {
+			if(emp.get(i).getPageTitle().equals(empid)) {
+				return ResponseEntity.ok().body(emp.get(i));		
+			}
+		}
+		return ResponseEntity.notFound().build();
+	}
 }
