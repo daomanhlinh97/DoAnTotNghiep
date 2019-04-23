@@ -5,38 +5,38 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.letsstartcoding.springbootrestapi.model.Content;
-import com.letsstartcoding.springbootrestapi.repository.ContentRepository;
+import com.letsstartcoding.springbootrestapi.model.Page;
+import com.letsstartcoding.springbootrestapi.repository.PageRepository;
 
 @Service
-public class ContentDAO {
+public class PageDAO {
 	
 	@Autowired
-	ContentRepository RequestRepository;
+	PageRepository RequestRepository;
 	
 	/*to save an employee*/
 	
-	public Content save(Content dri) {
+	public Page save(Page dri) {
 		return RequestRepository.save(dri);
 	}
 	
 	
 	/* search all employees*/
 	
-	public List<Content> findAll(){
+	public List<Page> findAll(){
 		return RequestRepository.findAll();
 	}
 	
 	
 	/*get an employee by id*/
-	public Content findOne(Long id) {
+	public Page findOne(Long id) {
 		return RequestRepository.findOne(id);
 	}
 	
 	
 	/*delete an employee*/
 	
-	public void delete(Content dri) {
+	public void delete(Page dri) {
 		RequestRepository.delete(dri);
 	}
 	

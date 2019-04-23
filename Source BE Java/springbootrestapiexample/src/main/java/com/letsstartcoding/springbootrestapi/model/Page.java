@@ -19,29 +19,26 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name="Content")
+@Table(name="Page")
 @EntityListeners(AuditingEntityListener.class)
-public class Content {	
+public class Page {	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long Id;
 	private String Alias;
 	private String Icon;
-	private String Description;
 	private boolean IsContainer;
 	
 	
-	
-	public Content() {
+	public Page() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Content(long id, String alias, String icon, String description, boolean isContainer) {
+	public Page(long id, String alias, String icon, boolean isContainer) {
 		super();
 		Id = id;
 		Alias = alias;
 		Icon = icon;
-		Description = description;
 		IsContainer = isContainer;
 	}
 	public long getId() {
@@ -62,12 +59,7 @@ public class Content {
 	public void setIcon(String icon) {
 		Icon = icon;
 	}
-	public String getDescription() {
-		return Description;
-	}
-	public void setDescription(String description) {
-		Description = description;
-	}
+
 	public boolean isIsContainer() {
 		return IsContainer;
 	}

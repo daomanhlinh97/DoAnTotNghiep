@@ -15,27 +15,26 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.letsstartcoding.springbootrestapi.dao.SortDAO;
-import com.letsstartcoding.springbootrestapi.model.Sort;
+import com.letsstartcoding.springbootrestapi.dao.ProductContentDAO;
+import com.letsstartcoding.springbootrestapi.model.ProductContent;
 
 @RestController
-@RequestMapping("/Sort")
-public class SortController {
+@RequestMapping("/ProductContent")
+public class ProductContentController {
 	
 	@Autowired
-	SortDAO DAO;
+	ProductContentDAO DAO;
 	
 	/* to save*/
 	@PostMapping("/add")
-	public Sort createEmployee(@Valid @RequestBody Sort emp) {
+	public ProductContent createEmployee(@Valid @RequestBody ProductContent emp) {
 		return DAO.save(emp);
 	}
 	
 	/*get all*/
 	@GetMapping("/getall")
-	public List<Sort> getAllEmployees(){
+	public List<ProductContent> getAllEmployees(){
 		return DAO.findAll();
 	}
 	
-
 }
