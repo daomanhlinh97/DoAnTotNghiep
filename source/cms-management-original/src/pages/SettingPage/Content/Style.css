@@ -42,5 +42,66 @@ p[aria-expanded="true"] {
     color:black;
     background:white;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    margin-left: 400px;
+    margin-top: 50px;
   }
+
+
+.form-wel{
+    margin-top:5px;
+    margin-left: 20px;
+    background-color: #fff;
+    width: 97%;
+    height: 300px;
+    border-radius: 10px;
+    margin-bottom: 250px;
+}
+
+.table-setting{
+    width: 100%;
+    height: 600px;
+}
+
+.td-w-20
+{
+    width: 20%;
+}
+
+.td-w-80
+{
+    width: 80%;
+}
+
+.td-h-20
+{
+    height: 20%;
+}
+
+.td-h-80
+{
+    height: 80%;
+}
+
+.lable-10px{
+    margin-top: 10px;
+}
+
+.lable-common
+{
+    margin-left: 25px;
+    
+}
+.lable-header
+{
+    margin-top: 30px;
+    font-size: 25px;
+}
+
+.lable-bold
+{
+    font-weight: bold;
+}
+
+ul.a{
+    list-style-type: circle;
+    margin-left: 35px;
+}

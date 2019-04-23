@@ -3,11 +3,11 @@ import { Route, Link } from "react-router-dom";
 import "./Content/Style.css"
 
 const menus = [
-  { name: "Welcome", icon: "gift", exact: "false", to: "/setting" },
-  { name: "Examine Management", icon: "download", exact: "false", to: "/setting/exam" },
-  { name: "Published Status", icon: "cloud-download", exact: "false", to: "/setting/pub" },
-  { name: "Models Builder", icon: "file", exact: "false", to: "/setting/mod" },
-  { name: "Health Check", icon: "file", exact: "false", to: "/setting/Hea" }
+  { name: "Welcome", exact: "false", to: "/setting" },
+  { name: "Examine Management", exact: "false", to: "/setting/exam" },
+  { name: "Published Status", exact: "false", to: "/setting/pub" },
+  { name: "Models Builder", exact: "false", to: "/setting/mod" },
+  { name: "Health Check", exact: "false", to: "/setting/Hea" }
 ];
 
 const MenuLink = ({ label, to, icon, exact }) => {
@@ -35,8 +35,8 @@ class SettingMenuHeader extends Component {
       return(
        <nav class="navbar-whitebackground-setting">
          <div class="container-fluid">
-           < div class="navbar-header">
-             <a class="navbar-brand title-brand" href="#">Setting</a>
+          <div class="navbar-header">
+             <p class="navbar-brand title-brand" href="#">Setting</p>
            </div>
            <ul class="nav navbar-nav navbar-right nav-package">
              {this.showMenu(menus)}

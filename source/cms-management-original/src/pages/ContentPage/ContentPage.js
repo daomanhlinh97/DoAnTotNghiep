@@ -25,10 +25,10 @@ class ContentPage extends Component {
   render() {
     return (
       <Router>
-        <div className="wrapper">
+        
           <SidebarContent />
           {this.showContentMenu(routes)}
-        </div>
+       
       </Router>
     );
   }

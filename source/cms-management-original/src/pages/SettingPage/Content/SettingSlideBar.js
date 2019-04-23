@@ -46,11 +46,7 @@ class SettingSideBar extends Component {
   render() {
     return (
       <div className="wrapper">
-      <nav className = "sidebar" ref={this.nav}>
-        <div className="sidebar-header">
-          <h3>Settings</h3>
-        </div>
-
+      <nav className = "sidebar" >
         <ul className="list-unstyled components">
           <DocumentType/>
           <MediaType/>
