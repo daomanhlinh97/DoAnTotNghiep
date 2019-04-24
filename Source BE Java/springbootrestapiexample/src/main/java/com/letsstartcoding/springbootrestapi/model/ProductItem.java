@@ -19,34 +19,34 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name="Blog")
+@Table(name="ProductItem")
 @EntityListeners(AuditingEntityListener.class)
-public class Blog {	
+public class ProductItem {	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long No;
 	private long Id;
+	private String Product_Name;
+	private double Price;
+	private String Category;
 	private String Description;
-	private String Keywords;
-	private boolean IsHide;
-	private String PageTitle;
-	private String Categories;
-	private String Excerpt;
-	public Blog() {
+	private String Sku;
+	private String Photos;
+	public ProductItem() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Blog(long no, long id, String description, String keywords, boolean isHide, String pageTitle,
-			String categories, String excerpt) {
+	public ProductItem(long no, long id, String product_Name, double price, String category, String description,
+			String sku, String photos) {
 		super();
 		No = no;
 		Id = id;
+		Product_Name = product_Name;
+		Price = price;
+		Category = category;
 		Description = description;
-		Keywords = keywords;
-		IsHide = isHide;
-		PageTitle = pageTitle;
-		Categories = categories;
-		Excerpt = excerpt;
+		Sku = sku;
+		Photos = photos;
 	}
 	public long getNo() {
 		return No;
@@ -60,41 +60,42 @@ public class Blog {
 	public void setId(long id) {
 		Id = id;
 	}
+	public String getProduct_Name() {
+		return Product_Name;
+	}
+	public void setProduct_Name(String product_Name) {
+		Product_Name = product_Name;
+	}
+	public double getPrice() {
+		return Price;
+	}
+	public void setPrice(double price) {
+		Price = price;
+	}
+	public String getCategory() {
+		return Category;
+	}
+	public void setCategory(String category) {
+		Category = category;
+	}
 	public String getDescription() {
 		return Description;
 	}
 	public void setDescription(String description) {
 		Description = description;
 	}
-	public String getKeywords() {
-		return Keywords;
+	public String getSku() {
+		return Sku;
 	}
-	public void setKeywords(String keywords) {
-		Keywords = keywords;
+	public void setSku(String sku) {
+		Sku = sku;
 	}
-	public boolean isIsHide() {
-		return IsHide;
+	public String getPhotos() {
+		return Photos;
 	}
-	public void setIsHide(boolean isHide) {
-		IsHide = isHide;
+	public void setPhotos(String photos) {
+		Photos = photos;
 	}
-	public String getPageTitle() {
-		return PageTitle;
-	}
-	public void setPageTitle(String pageTitle) {
-		PageTitle = pageTitle;
-	}
-	public String getCategories() {
-		return Categories;
-	}
-	public void setCategories(String categories) {
-		Categories = categories;
-	}
-	public String getExcerpt() {
-		return Excerpt;
-	}
-	public void setExcerpt(String excerpt) {
-		Excerpt = excerpt;
-	}
+	
 	
 }

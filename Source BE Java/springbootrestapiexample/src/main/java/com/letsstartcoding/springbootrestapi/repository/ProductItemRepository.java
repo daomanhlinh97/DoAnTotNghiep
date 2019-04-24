@@ -3,9 +3,9 @@ package com.letsstartcoding.springbootrestapi.repository;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.letsstartcoding.springbootrestapi.model.Blog;
+import com.letsstartcoding.springbootrestapi.model.ProductItem;
 
 
-public interface BlogRepository extends JpaRepository<Blog, Long> {
-
+public interface ProductItemRepository extends JpaRepository<ProductItem, Long> {
+	
 }

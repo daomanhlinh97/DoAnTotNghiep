@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.letsstartcoding.springbootrestapi.dao.SortDAO;
-import com.letsstartcoding.springbootrestapi.model.ProductContent;
+import com.letsstartcoding.springbootrestapi.model.ProductItem;
 import com.letsstartcoding.springbootrestapi.model.Sort;
 import com.letsstartcoding.springbootrestapi.model.CompositeKey;
 

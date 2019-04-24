@@ -15,35 +15,33 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.letsstartcoding.springbootrestapi.dao.ProductContentDAO;
-import com.letsstartcoding.springbootrestapi.model.Page;
-import com.letsstartcoding.springbootrestapi.model.ProductContent;
-import com.letsstartcoding.springbootrestapi.repository.ProductContentRepository;
+import com.letsstartcoding.springbootrestapi.dao.BlogContentDAO;
+import com.letsstartcoding.springbootrestapi.model.BlogContent;
 
 @RestController
-@RequestMapping("/ProductContent")
-public class ProductContentController {
+@RequestMapping("/BlogContent")
+public class BlogContentController {
 	
 	@Autowired
-	ProductContentDAO DAO;
+	BlogContentDAO DAO;
 	
 	/* to save*/
 	@PostMapping("/add")
-	public ProductContent createEmployee(@Valid @RequestBody ProductContent emp) {
+	public BlogContent createEmployee(@Valid @RequestBody BlogContent emp) {
 		return DAO.save(emp);
 	}
 	
 	/*get all*/
 	@GetMapping("/getall")
-	public List<ProductContent> getAllEmployees(){
+	public List<BlogContent> getAllEmployees(){
 		return DAO.findAll();
 	}
 	
 	/*get by id*/
 	@GetMapping("/getid/{id}")
-	public ResponseEntity<ProductContent> getProContentById(@PathVariable(value="id") Long empid){
+	public ResponseEntity<BlogContent> getProContentById(@PathVariable(value="id") Long empid){
 		
-		ProductContent emp= DAO.findOne(empid);
+		BlogContent emp= DAO.findOne(empid);
 
 		if(emp==null) {
 			return ResponseEntity.notFound().build();
@@ -51,5 +49,5 @@ public class ProductContentController {
 		return ResponseEntity.ok().body(emp);
 		
 	}
-	
+
 }

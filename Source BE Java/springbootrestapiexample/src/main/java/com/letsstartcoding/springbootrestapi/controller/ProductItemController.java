@@ -15,35 +15,34 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.letsstartcoding.springbootrestapi.dao.ProductContentDAO;
-import com.letsstartcoding.springbootrestapi.model.Page;
-import com.letsstartcoding.springbootrestapi.model.ProductContent;
-import com.letsstartcoding.springbootrestapi.repository.ProductContentRepository;
+import com.letsstartcoding.springbootrestapi.dao.ProductItemDAO;
+import com.letsstartcoding.springbootrestapi.model.ProductItem;
+import com.letsstartcoding.springbootrestapi.repository.ProductItemRepository;
 
 @RestController
-@RequestMapping("/ProductContent")
-public class ProductContentController {
+@RequestMapping("/ProductItem")
+public class ProductItemController {
 	
 	@Autowired
-	ProductContentDAO DAO;
+	ProductItemDAO DAO;
 	
 	/* to save*/
 	@PostMapping("/add")
-	public ProductContent createEmployee(@Valid @RequestBody ProductContent emp) {
+	public ProductItem createEmployee(@Valid @RequestBody ProductItem emp) {
 		return DAO.save(emp);
 	}
 	
 	/*get all*/
 	@GetMapping("/getall")
-	public List<ProductContent> getAllEmployees(){
+	public List<ProductItem> getAllEmployees(){
 		return DAO.findAll();
 	}
 	
 	/*get by id*/
 	@GetMapping("/getid/{id}")
-	public ResponseEntity<ProductContent> getProContentById(@PathVariable(value="id") Long empid){
+	public ResponseEntity<ProductItem> getProContentById(@PathVariable(value="id") Long empid){
 		
-		ProductContent emp= DAO.findOne(empid);
+		ProductItem emp= DAO.findOne(empid);
 
 		if(emp==null) {
 			return ResponseEntity.notFound().build();

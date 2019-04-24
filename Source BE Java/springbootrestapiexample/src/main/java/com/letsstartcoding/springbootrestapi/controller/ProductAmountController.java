@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.letsstartcoding.springbootrestapi.dao.ProductAmountDAO;
 import com.letsstartcoding.springbootrestapi.model.ProductAmount;
-import com.letsstartcoding.springbootrestapi.model.ProductContent;
+import com.letsstartcoding.springbootrestapi.model.ProductItem;
 
 @RestController
 @RequestMapping("/ProductAmount")

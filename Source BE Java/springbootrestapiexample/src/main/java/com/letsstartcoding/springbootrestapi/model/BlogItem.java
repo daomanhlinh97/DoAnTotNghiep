@@ -19,32 +19,34 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name="ProductContent")
+@Table(name="BlogItem")
 @EntityListeners(AuditingEntityListener.class)
-public class ProductContent {	
+public class BlogItem {	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long No;
 	private long Id;
-	private String PageTitle;
 	private String Description;
 	private String Keywords;
 	private boolean IsHide;
-	private String DefaultCurrency;
-	public ProductContent() {
+	private String PageTitle;
+	private String Categories;
+	private String Excerpt;
+	public BlogItem() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public ProductContent(long no, long id, String pageTitle, String description, String keywords, boolean isHide,
-			String defaultCurrency) {
+	public BlogItem(long no, long id, String description, String keywords, boolean isHide, String pageTitle,
+			String categories, String excerpt) {
 		super();
 		No = no;
 		Id = id;
-		PageTitle = pageTitle;
 		Description = description;
 		Keywords = keywords;
 		IsHide = isHide;
-		DefaultCurrency = defaultCurrency;
+		PageTitle = pageTitle;
+		Categories = categories;
+		Excerpt = excerpt;
 	}
 	public long getNo() {
 		return No;
@@ -57,12 +59,6 @@ public class ProductContent {
 	}
 	public void setId(long id) {
 		Id = id;
-	}
-	public String getPageTitle() {
-		return PageTitle;
-	}
-	public void setPageTitle(String pageTitle) {
-		PageTitle = pageTitle;
 	}
 	public String getDescription() {
 		return Description;
@@ -82,12 +78,23 @@ public class ProductContent {
 	public void setIsHide(boolean isHide) {
 		IsHide = isHide;
 	}
-	public String getDefaultCurrency() {
-		return DefaultCurrency;
+	public String getPageTitle() {
+		return PageTitle;
 	}
-	public void setDefaultCurrency(String defaultCurrency) {
-		DefaultCurrency = defaultCurrency;
+	public void setPageTitle(String pageTitle) {
+		PageTitle = pageTitle;
 	}
-
+	public String getCategories() {
+		return Categories;
+	}
+	public void setCategories(String categories) {
+		Categories = categories;
+	}
+	public String getExcerpt() {
+		return Excerpt;
+	}
+	public void setExcerpt(String excerpt) {
+		Excerpt = excerpt;
+	}
 	
 }

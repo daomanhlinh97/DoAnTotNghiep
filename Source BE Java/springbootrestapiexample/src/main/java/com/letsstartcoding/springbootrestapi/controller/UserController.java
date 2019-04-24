@@ -15,33 +15,34 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.letsstartcoding.springbootrestapi.dao.BlogDAO;
-import com.letsstartcoding.springbootrestapi.model.Blog;
+import com.letsstartcoding.springbootrestapi.dao.UserDAO;
+import com.letsstartcoding.springbootrestapi.model.User;
+import com.letsstartcoding.springbootrestapi.repository.UserRepository;
 
 @RestController
-@RequestMapping("/Blog")
-public class BlogController {
+@RequestMapping("/User")
+public class UserController {
 	
 	@Autowired
-	BlogDAO DAO;
-	
+	UserDAO DAO;
+
 	/* to save*/
 	@PostMapping("/add")
-	public Blog createEmployee(@Valid @RequestBody Blog emp) {
+	public User createEmployee(@Valid @RequestBody User emp) {
 		return DAO.save(emp);
 	}
 	
 	/*get all*/
 	@GetMapping("/getall")
-	public List<Blog> getAllEmployees(){
+	public List<User> getAllEmployees(){
 		return DAO.findAll();
 	}
 	
 	/*get by id*/
 	@GetMapping("/getid/{id}")
-	public ResponseEntity<Blog> getProContentById(@PathVariable(value="id") Long empid){
+	public ResponseEntity<User> getProContentById(@PathVariable(value="id") Long empid){
 		
-		Blog emp= DAO.findOne(empid);
+		User emp= DAO.findOne(empid);
 
 		if(emp==null) {
 			return ResponseEntity.notFound().build();
@@ -49,5 +50,5 @@ public class BlogController {
 		return ResponseEntity.ok().body(emp);
 		
 	}
-
+	
 }

@@ -19,32 +19,34 @@ import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
-@Table(name="ProductContent")
+@Table(name="BlogContent")
 @EntityListeners(AuditingEntityListener.class)
-public class ProductContent {	
+public class BlogContent {	
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private long No;
 	private long Id;
-	private String PageTitle;
+	private String Page_Title;
 	private String Description;
 	private String Keywords;
 	private boolean IsHide;
-	private String DefaultCurrency;
-	public ProductContent() {
+	private int PostShow;
+	private String DisqusShortname;
+	public BlogContent() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public ProductContent(long no, long id, String pageTitle, String description, String keywords, boolean isHide,
-			String defaultCurrency) {
+	public BlogContent(long no, long id, String page_Title, String description, String keywords, boolean isHide,
+			int postShow, String disqusShortname) {
 		super();
 		No = no;
 		Id = id;
-		PageTitle = pageTitle;
+		Page_Title = page_Title;
 		Description = description;
 		Keywords = keywords;
 		IsHide = isHide;
-		DefaultCurrency = defaultCurrency;
+		PostShow = postShow;
+		DisqusShortname = disqusShortname;
 	}
 	public long getNo() {
 		return No;
@@ -58,11 +60,11 @@ public class ProductContent {
 	public void setId(long id) {
 		Id = id;
 	}
-	public String getPageTitle() {
-		return PageTitle;
+	public String getPage_Title() {
+		return Page_Title;
 	}
-	public void setPageTitle(String pageTitle) {
-		PageTitle = pageTitle;
+	public void setPage_Title(String page_Title) {
+		Page_Title = page_Title;
 	}
 	public String getDescription() {
 		return Description;
@@ -82,12 +84,18 @@ public class ProductContent {
 	public void setIsHide(boolean isHide) {
 		IsHide = isHide;
 	}
-	public String getDefaultCurrency() {
-		return DefaultCurrency;
+	public int getPostShow() {
+		return PostShow;
 	}
-	public void setDefaultCurrency(String defaultCurrency) {
-		DefaultCurrency = defaultCurrency;
+	public void setPostShow(int postShow) {
+		PostShow = postShow;
 	}
-
+	public String getDisqusShortname() {
+		return DisqusShortname;
+	}
+	public void setDisqusShortname(String disqusShortname) {
+		DisqusShortname = disqusShortname;
+	}
+	
 	
 }
