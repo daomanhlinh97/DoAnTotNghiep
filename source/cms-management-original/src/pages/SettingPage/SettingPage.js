@@ -3,12 +3,12 @@ import React, { Component } from "react";
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import SidebarSetting from "./Content/SettingSlideBar";
 import SettingMenuHeader from "./SettingMenuHeader";
-import ContentDefaultWel from "./Content/ContentDefaultWel"
+import SettingPageRouter from "./SettingPageRouter";
 
 class SettingPage extends Component {
   render() {
     return (
-      <div>
+      <Router>
         <SettingMenuHeader/>
         <table className = "table-setting">
           <tr>
@@ -16,7 +16,7 @@ class SettingPage extends Component {
               <SidebarSetting/>
             </td>
             <td className = "td-w-80 td-h-20">
-              <ContentDefaultWel/>
+            {this.showContentMenu(SettingPageRouter)}
             </td>
           </tr>
           <tr>
@@ -25,9 +25,18 @@ class SettingPage extends Component {
           </tr>
         </table>
         
-      </div>
+      </Router>
     );
   }
+  showContentMenu = SettingPageRouter => {
+    let result = null;
+    if (SettingPageRouter.length > 0) {
+      result = SettingPageRouter.map((SettingPageRouter, index) => {
+        return <Route key={index} path={SettingPageRouter.path} component={SettingPageRouter.main} />;
+      });
+    }
+    return <Switch>{result}</Switch>;
+  };
 }
 
 export default SettingPage;

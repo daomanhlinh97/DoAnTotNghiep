@@ -34,7 +34,7 @@ class PackagesMenuHeader extends Component {
        <nav class="navbar-whitebackground">
          <div class="container-fluid">
            < div class="navbar-header">
-             <a class="navbar-brand title-brand" href="#">Packages</a>
+             <a class="navbar-brand title-brand" href="/packages">Packages</a>
            </div>
            <ul class="nav navbar-nav navbar-right nav-package">
              {this.showMenu(menus)}

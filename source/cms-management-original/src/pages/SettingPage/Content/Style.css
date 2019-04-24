@@ -4,6 +4,9 @@
     min-height: 600px;
     max-height: 100%;
     background: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-top: 40px;
     transition: all 0.3s;
 }
 .sidebar .sidebar-header {
@@ -51,9 +54,19 @@ p[aria-expanded="true"] {
     margin-left: 20px;
     background-color: #fff;
     width: 97%;
-    height: 300px;
     border-radius: 10px;
-    margin-bottom: 250px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.height-300
+{
+    height: 300px;
+    margin-bottom: 280px;
+}
+
+.height-200{
+    height: 200px;
+    margin-bottom: 380px;
 }
 
 .table-setting{
@@ -104,4 +117,154 @@ p[aria-expanded="true"] {
 ul.a{
     list-style-type: circle;
     margin-left: 35px;
+}
+
+.button-reload-models
+{
+    outline: none;
+    border:none;
+    text-align: center;
+    width: 100px;
+    height: 40px;
+    background-color: rgb(227, 227, 228) ;
+    border-radius: 20px;
+}
+
+.button-reload-models:hover
+{
+    color: rgb(125, 125, 250);
+}
+
+.button-check-all
+{
+    outline: none;
+    border:none;
+    text-align: center;
+    width: 150px;
+    height: 40px;
+    background-color: rgb(71, 201, 115) ;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.button-check-all:hover
+{
+    background-color: rgb(95, 214, 135) ;
+}
+
+.div-margin{
+    position: relative;
+    margin-top:5px;
+    margin-left: 20px;
+}
+
+.form-hea{
+    margin-top:5px;
+    margin-left: 20px;
+    width: 97%;
+}
+
+.form-hea form{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding-bottom: 30px;
+}
+
+.table-hea{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.table-hea td{
+    width: 20%;
+}
+
+.table-hea td button{
+    outline: none;
+    border-top: none;
+    width: 95%;
+    height: 100%;
+    background-color: #fff;
+    color: black;
+    border-radius: 5px;
+    font-weight: bold;
+    box-shadow: 0 0px rgb(238, 237, 237);
+}
+
+.table-hea td button:hover{
+    box-shadow: 0 10px 12px 0 rgba(0,0,0,0.24),0 15px 35px 0 rgba(0,0,0,0.19);
+}
+
+
+.form-exa{
+    margin-top:5px;
+    margin-left: 20px;
+    width: 97%;
+}
+
+.form-exa-1{
+    background-color: #fff;
+    padding-bottom: 30px;
+    border-radius: 5px;
+}
+
+.form-exa-1-2{
+    background-color: rgb(1, 1, 85);
+    color: #fff;
+    font-size: 16px;
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.form-published
+{
+    margin-top:5px;
+    margin-left: 20px;
+    width: 97%;
+}
+
+.form-son
+{
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding-bottom: 30px;
+}
+
+.form-son form
+{
+    width: 95%;
+    background-color: rgb(243, 243, 243);
+    margin-left: 25px;
+    padding: 10px;
+    padding-bottom: 100px;
+}
+
+.button-ref-col-re{
+    background-color: orange;
+    outline: none;
+    border: none;
+    width: 100px;
+    height: 40px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: 25px;
+}
+
+.button-ref-col-re:hover{
+    background-color: rgb(247, 189, 81);
+}
+
+.lable-font-w-800
+{
+    font-weight: 100;
+    margin-left: 25px;
+    font-size: 14px;
+    color: rgb(133, 133, 133);
 }

@@ -5,10 +5,8 @@ import SettingPage from "./pages/SettingPage/SettingPage";
 import UserPage from "./pages/UserPage/UserPage";
 import FormPage from "./pages/FormPage/FormPage";
 import PackagesPage from "./pages/PackagesPage/PackagesPage";
-import CreatedChildPage from "./pages/PackagesPage/ChildPage/CreatedChildPage";
-import LocalChildPage from "./pages/PackagesPage/ChildPage/LocalChildPage";
-import PackagesChildPage from "./pages/PackagesPage/ChildPage/PackagesChildPage";
-import InstalledChildPage from "./pages/PackagesPage/ChildPage/InstalledChildPage";
+
+
 const routes = [
   {
     path: "/",
@@ -49,6 +47,26 @@ const routes = [
   {
     path: "/packages/created",
     main: () => <PackagesPage/>
+  },
+  {
+    path: "/setting",
+    main: () => <SettingPage />
+  },
+  {
+    path: "/setting/exam",
+    main: () => <SettingPage />
+  },
+  {
+    path: "/setting/pub",
+    main: () => <SettingPage />
+  },
+  {
+    path: "/setting/mod",
+    main: () => <SettingPage />
+  },
+  {
+      path: "/setting/Hea",
+      main: () => <SettingPage />
   }
 ];
 

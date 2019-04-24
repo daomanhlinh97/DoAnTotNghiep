@@ -5,7 +5,7 @@ class ContentDefaultWel extends Component
     render()
     {
         return(
-            <form className = "form-wel">
+            <form className = "form-wel  height-300">
                 <label className = "lable-header lable-common">Start here</label>
                 <p className = "lable-common lable-10px">This section contains the building blocks for your Umbraco site. Follow the below links to find out more about working with the items in the Settings section:</p>
                 <lable className = "lable-common lable-10px lable-bold">Find out more:</lable>
