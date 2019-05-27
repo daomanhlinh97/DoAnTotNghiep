@@ -11,10 +11,17 @@ class Sidebar extends Component {
       <Link to = "/" className = "link-decoration">
       <div className="sidebar-header ">
           <h3>Content</h3>
+          <div class="dropdown">
+                    <button class="dropbtn">Dropdown</button>
+                    <div class="dropdown-content">
+                    <a href="#">Link 1</a>
+                    <a href="#">Link 2</a>
+                    <a href="#">Link 3</a>
+  </div>
+</div>
       </div>
       </Link>
-        
-
+      
         <ul className="list-unstyled components">
           <li>
             <Link to="/" className = "link-decoration">
@@ -26,6 +33,7 @@ class Sidebar extends Component {
                 <i class="fa fa-location-arrow arrow" aria-hidden="true" />
                 <i class="fa fa-home home-content" aria-hidden="true" />
                 Home
+               
               </p>
             </Link>
             <ul className="collapse list-unstyled" id="homeSubmenu0">
