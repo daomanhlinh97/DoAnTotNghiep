@@ -762,8 +762,8 @@ input[type=submit]:hover {
 .save-publish{
  background-color:white;
  position: fixed;
- margin-top: 85vh;
- width: 1009px;
+ margin-top: 82.5vh;
+ width: 1000px;
  margin-left: 0px;
  margin-right: 0px;
  border-top:0.5px solid rgb(221, 218, 218);
@@ -890,9 +890,7 @@ ul ul a {
     position: absolute;
     transform: translate(-50%,-50%),
 }
-::-webkit-scrollbar{
-  width:0px;
-}
+
 
 .userColor p{
   float: left;
