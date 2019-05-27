@@ -1,31 +1,17 @@
-// import React, { Component } from "react";
-// import { Link } from "react-router-dom";
-// import SidebarContent from '../../components/Content/Sidebar/Sidebar';
 
-// class ContentPage extends Component {
-//   render() {
-//     return (
-//       <div className="wrapper">
-//         <SidebarContent/>
-
-//       </div>
-//     );
-//   }
-// }
-
-// export default ContentPage;
 
 import React, { Component } from "react";
 
 import { Switch, Route, BrowserRouter as Router } from "react-router-dom";
 import SidebarContent from "../../components/Content/Sidebar/Sidebar";
 import routes from "./ContentRoutes";
+import ContentMenuHeader from "./ContentMenuHeader"
 
 class ContentPage extends Component {
   render() {
     return (
       <Router>
-        
+          <ContentMenuHeader/>
           <SidebarContent />
           {this.showContentMenu(routes)}
        

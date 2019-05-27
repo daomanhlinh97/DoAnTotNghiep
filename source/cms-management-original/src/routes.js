@@ -3,8 +3,9 @@ import ContentPage from "./pages/ContentPage/ContentPage";
 import MediaPage from "./pages/MediaPage/MediaPage";
 import SettingPage from "./pages/SettingPage/SettingPage";
 import UserPage from "./pages/UserPage/UserPage";
-import FormPage from "./pages/FormPage/FormPage";
+import Login2 from "./pages/LoginPage/Login2";
 import PackagesPage from "./pages/PackagesPage/PackagesPage";
+import LoginPage from "./pages/LoginPage/LoginPage";
 
 
 const routes = [
@@ -30,7 +31,7 @@ const routes = [
   },
   {
     path: "/forms",
-    main: () => <FormPage />
+    main: () => <LoginPage />
   },
   {
     path: "/packages",
