@@ -50,5 +50,39 @@
 
     <script src="//code.jquery.com/jquery.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      var Umbraco = {};
+      Umbraco.Sys = {};
+      Umbraco.Sys.ServerVariables = {"umbracoUrls":{"externalLoginsUrl":"/umbraco/ExternalLogin","serverVarsJs":"/umbraco/ServerVariables","authenticationApiBaseUrl":"/umbraco/backoffice/UmbracoApi/Authentication/","currentUserApiBaseUrl":"/umbraco/backoffice/UmbracoApi/CurrentUser/"},"umbracoSettings":{"imageFileTypes":"jpeg,jpg,gif,bmp,png,tiff,tif","maxFileSize":"51200","usernameIsEmail":true,"allowPasswordReset":true,"loginBackgroundImage":"assets/img/installer.jpg","canSendRequiredEmail":false},"isDebuggingEnabled":false,"application":{"cacheBuster":"0202575321a7f1703becb4c52cc796d0","applicationPath":"/"},"features":{"disabledFeatures":{"disableTemplates":false}}};
+  </script>
+
+<script>
+
+document.angularReady = function(app) {
+  
+var errors = [];
+app.value("externalLoginInfo", {
+errors: errors,
+providers: []
+});
+
+  
+var errors = [];
+app.value("resetPasswordCodeInfo", {
+errors: errors,
+resetCodeModel: null
+});
+
+  //required for the noscript trick
+  document.getElementById("mainwrapper").style.display = "inherit";
+}
+</script>
+
+<script src="lib/lazyload-js/lazyload.min.js"></script>
+<script src="/umbraco/Application?umb__rnd=af303d9ca4b6d9f911eaee2b29bbbae6"></script>
+
+
+
+
   </body>
 </html>
