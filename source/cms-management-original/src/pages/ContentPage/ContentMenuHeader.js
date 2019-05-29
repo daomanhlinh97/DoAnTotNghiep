@@ -7,6 +7,7 @@ const menus = [
   { name: "Action", icon: "cloud-download", exact: "false", to: "/packages/local" },
 ];
 
+
 const MenuLink = ({ label, to, icon, exact }) => {
   return (
     <Route
@@ -30,35 +31,55 @@ const MenuLink = ({ label, to, icon, exact }) => {
 class ContentMenuHeader extends Component {
     render() {
       return(
-       <nav class="navbar-whitebackground-content">
-         <div class="container-fluid">
-           < div class="navbar-header">
-             <a class="navbar-brand title-brand" href="/packages">Content</a>
-           </div>
-           <ul class="nav navbar-nav navbar-right nav-package">
-             {this.showMenu(menus)}
-           </ul>
-         </div>
-       </nav>
+        <div id="content">
+        <div className = "row save-publish-top">
+          <table>
+            <tr>
+              <td className = "col-row-td-input">
+                <input type = "text" className = "input-edit-name" value = "Home"></input>
+              </td>
+              <td>
+              
+              <div class="dropdown">
+             
+              <i className={`fa fa-bell`} />
+              <button ><div><span className = "span-package">Content</span></div></button>
+                  
+                    <div class="dropdown-content">
+                    <a href="#">Hero</a>
+                    <a href="#">Header</a>
+                    <a href="#">Body</a>
+                    <a href="#">Footer</a>
+  </div>
+</div>
+                
+              </td>
+              <td>
+              <div class="dropdown">
+              <i className={`fa fa-file`} />
+              <button ><div><span className = "span-package">Info</span></div></button>
+                </div>
+              </td>
+              <td>
+              <div class="dropdown">
+              <i className={`fa fa-file`} />
+              <button ><div><span className = "span-package">Action</span></div></button>
+              <div class="dropdown-content">
+                    <a href="#">Create</a>
+                    <a href="#">Move</a>
+                    <a href="#">Delete</a>
+                    <a href="#">Copy</a>
+                    <a href="#">Reload</a>
+  </div>
+                </div>
+                </td>
+            </tr>
+          </table>
+        </div>
+        </div>
       );
    }
-   showMenu = menus => {
-     var result = null;
-     if (menus.length > 0) {
-       result = menus.map((menu, index) => {
-         return (
-           <MenuLink
-             key={index}
-             exact={menu.exact}
-             label={menu.name}
-             to={menu.to}
-             icon={menu.icon}
-           />
-         );
-       });
-     }
-     return result;
-   };
+   
  }
  
  export default ContentMenuHeader;

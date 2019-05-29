@@ -530,6 +530,8 @@ input[type=file] {
   background: rgb(250, 250, 191);
   padding-right: 50px;
   padding-top: 60px;
+ 
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
 .search-packages
@@ -766,8 +768,71 @@ input[type=submit]:hover {
   max-width: 1009px;
   max-height: 50px;
 }
+
+.save-publish-top{
+  background-color: white;
+  position: fixed;
+  width: 1200px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border:0.5px solid #cfcdcd;
+  max-width: 1009px;
+  max-height: 100px;
+  z-index: 9;
+  height: 50px;
+ }
+
+ .save-publish-top table
+ {
+   width: 100%;
+   height: 100%;
+   text-align: center;
+ }
+ .save-publish-top table tr td{
+  border-right: 0.5px solid rgb(122, 119, 119);
+ }
+
+ .save-publish-top table tr td button
+ {
+   width: 100%;
+   height: 100%;
+   outline: none;
+   outline-color: none;
+   border: none;
+   background-color: none;
+   background: none;
+   text-align: center;
+ }
+
+ .save-publish-top table tr button:hover
+ {
+   border-bottom: 5px solid rgb(250, 148, 148);
+ } 
+
+ .save-publish-top table tr button:focus
+ {
+   border-bottom: 5px solid rgb(250, 148, 148);
+
+ }
+
+ .col-row-td-input
+ {
+   width: 70%;
+   text-align: center;
+ }
+
+ .input-edit-name
+ {
+   width: 90%;
+   height: 70%;
+   outline: none;
+   outline-color: none;
+   size: 18px;
+   font-weight: bolder;
+ }
+
 .save-publish{
- background-color:white;
+ background-color: blue;
  position: fixed;
  margin-top: 82.5vh;
  width: 1000px;
@@ -787,8 +852,9 @@ input[type=submit]:hover {
   margin-left:0;
   width:120px;
   background-color: rgb(228, 226, 226);
-  
-
+  outline: none;
+  outline-color: none;
+  outline-style: none;
 }
 .btn-content-save{
   background-color: rgb(228, 226, 226);
@@ -955,6 +1021,7 @@ ul ul a {
   padding-top: 5px;
   min-width: 600px;
   margin-bottom: 30px;
+  margin-top: 60px
 }
 
 .padding-content{
@@ -1059,13 +1126,16 @@ ul ul a {
 }
 /*asdasdsad*/
 .dropbtn {
-  background-color: #4CAF50;
-  color: white;
+  background: none;
+  color: black;
   font-size: 16px;
   position: left;
-  margin-left: 90%;
-  border: none;
   cursor: pointer;
+  border: 1px solid black;
+  border-radius: 25px;
+  outline-color: none;
+  outline: none;
+  outline-style: none;
 }
 
 .dropdown {
@@ -1076,11 +1146,12 @@ ul ul a {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #f9f9f9;
-  min-width: 200px;
+  background-color:white;
+  min-width: 250px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
- 
+  text-align: left;
+  
 
 }
 
@@ -1102,5 +1173,5 @@ ul ul a {
 }
 
 .dropdown:hover .dropbtn {
-  background-color: #3e8e41;
+  background-color: #f8f8e1;
 }

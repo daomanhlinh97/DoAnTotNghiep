@@ -11,9 +11,9 @@ class ContentPage extends Component {
   render() {
     return (
       <Router>
+          <ContentMenuHeader/>
           <SidebarContent />
           {this.showContentMenu(routes)}
-       
       </Router>
     );
   }

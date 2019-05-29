@@ -10,13 +10,15 @@ class Sidebar extends Component {
       <nav id="sidebar">
       <Link to = "/" className = "link-decoration">
       <div className="sidebar-header ">
-          <h3>Content</h3>
+      <h3>Content</h3>
           <div class="dropdown">
-                    <button class="dropbtn">Dropdown</button>
+                   
+                    <button class="dropbtn">Manage Pages</button>
                     <div class="dropdown-content">
-                    <a href="#">Link 1</a>
-                    <a href="#">Link 2</a>
-                    <a href="#">Link 3</a>
+                    <a href="#">Create</a>
+                    <a href="#">Sort</a>
+                    <a href="#">Reload</a>
+                    <a href="#">Pages</a>
   </div>
 </div>
       </div>

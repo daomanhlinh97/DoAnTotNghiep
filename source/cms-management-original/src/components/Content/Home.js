@@ -11,7 +11,6 @@ class Home extends Component {
           <div className = "save-publish-bottom">
           <div className = "col-md-6"></div>
           <div className = "col-md-2">
-          
           <button class="btn btn-default btn-content-preview">Preview</button>
                     
           </div>
